@@ -10,10 +10,10 @@
     "export": "next export",
     "build": "next build",
     "build-analyze": "cross-env ANALYZE=true next build",
-    "check-formatting": "prettier --list-different 'src/**/*.{ts,tsx}'",
+    "check-formatting": "prettier --list-different '**/*.{ts,tsx}'",
     "cm": "cz --disable-emoji",
     "clean-build": "rm -rf out .next*",
-    "gen:theme-typings": "chakra-cli tokens ./src/theme.ts",
+    "gen:theme-typings": "chakra-cli tokens ./theme.ts",
     "postinstall": "husky install && npm run gen:theme-typings",
     "release": "standard-version"
   },
