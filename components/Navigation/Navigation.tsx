@@ -1,5 +1,5 @@
+import { NAVIGATION_MENU } from '@/configs'
 import { Container, Flex, useColorModeValue as mode } from '@chakra-ui/react'
-import { NAVIGATION_MENU } from 'configs'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
 import { NavigationMenu } from './NavigationMenu'

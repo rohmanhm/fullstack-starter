@@ -1,5 +1,5 @@
+import { withNavigation } from '@/components/Navigation'
 import { Button, Container, useColorMode } from '@chakra-ui/react'
-import { withNavigation } from 'components/Navigation'
 import Head from 'next/head'
 import React from 'react'
 

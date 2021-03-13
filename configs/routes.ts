@@ -1,7 +1,7 @@
 export const ROUTES = {
   MAIN: '/',
   PROMO: '/promo',
-  search: '/search',
+  SEARCH: '/search',
   TRANSACTIONS: '/transactions',
   PROFILE: '/profile',
 }

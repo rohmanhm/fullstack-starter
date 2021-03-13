@@ -1,5 +1,5 @@
+import { withNavigation } from '@/components/Navigation'
 import { Container } from '@chakra-ui/react'
-import { withNavigation } from 'components/Navigation'
 
 const TransactionsPage = () => {
   return (

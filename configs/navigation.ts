@@ -11,22 +11,22 @@ export const NAVIGATION_MENU = [
   {
     icon: HiCollection,
     label: 'Menu',
-    route: '/',
+    route: ROUTES.MAIN,
   },
   {
     icon: HiReceiptTax,
     label: 'Promo',
-    route: '/promo',
+    route: ROUTES.PROMO,
   },
   {
     icon: HiSearch,
     label: 'Pencarian',
-    route: '/search',
+    route: ROUTES.SEARCH,
   },
   {
     icon: HiClipboardList,
     label: 'Transaksi',
-    route: '/transactions',
+    route: ROUTES.TRANSACTIONS,
   },
   {
     icon: HiUser,
