@@ -20,7 +20,10 @@ const Navigation: FC = () => {
         {NAVIGATION_MENU.map((menu, i) => (
           <NavigationMenu
             key={i}
-            isActive={menu.route === router.pathname}
+            isActive={
+              menu.activeCondition?.(router.pathname) ||
+              menu.pathname === router.pathname
+            }
             {...menu}
           />
         ))}

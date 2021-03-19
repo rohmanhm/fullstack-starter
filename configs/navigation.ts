@@ -1,3 +1,4 @@
+import { IconType } from 'react-icons'
 import {
   HiClipboardList,
   HiCollection,
@@ -7,30 +8,38 @@ import {
 } from 'react-icons/hi'
 import { ROUTES } from './routes'
 
-export const NAVIGATION_MENU = [
+interface NavigationMenuItem {
+  icon: IconType
+  label: string
+  pathname: string
+  activeCondition?: (pathname: string) => boolean
+}
+export const NAVIGATION_MENU: NavigationMenuItem[] = [
   {
     icon: HiCollection,
     label: 'Menu',
-    route: ROUTES.MAIN,
+    pathname: ROUTES.MAIN,
   },
   {
     icon: HiReceiptTax,
     label: 'Promo',
-    route: ROUTES.PROMO,
+    pathname: ROUTES.PROMO,
   },
   {
     icon: HiSearch,
     label: 'Pencarian',
-    route: ROUTES.SEARCH,
+    pathname: ROUTES.SEARCH,
   },
   {
     icon: HiClipboardList,
     label: 'Transaksi',
-    route: ROUTES.TRANSACTIONS,
+    pathname: ROUTES.TRANSACTIONS,
   },
   {
     icon: HiUser,
     label: 'Akun',
-    route: ROUTES.PROFILE,
+    pathname: ROUTES.PROFILE,
+    activeCondition: (pathname) =>
+      [ROUTES.PROFILE, '/login'].includes(pathname),
   },
 ]

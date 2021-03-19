@@ -12,10 +12,10 @@ export const NavigationMenu: FC<{
   icon: As
   label: string
   isActive?: boolean
-  route?: string
-}> = ({ label, icon, route, isActive }) => {
+  pathname?: string
+}> = ({ label, icon, pathname, isActive }) => {
   return (
-    <NextLink href={route || '#'}>
+    <NextLink href={pathname || '#'}>
       <Flex
         as="a"
         flex="1"

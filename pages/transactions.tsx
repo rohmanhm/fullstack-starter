@@ -1,5 +1,8 @@
 import { withNavigation } from '@/components/Navigation'
+import { mustAuth } from '@/libs/ssg-middleware'
 import { Container } from '@chakra-ui/react'
+
+export const getServerSideProps = mustAuth()
 
 const TransactionsPage = () => {
   return (
