@@ -1,12 +1,6 @@
 import firebaseAdmin from 'firebase-admin'
 import nookies from 'nookies'
-import React, {
-  createContext,
-  FC,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
+import { createContext, FC, useContext, useEffect, useState } from 'react'
 import { firebaseClient } from './firebase-client'
 
 export type AuthToken = firebaseAdmin.auth.DecodedIdToken

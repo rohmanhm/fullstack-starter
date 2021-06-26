@@ -1,7 +1,3 @@
 /// <reference types="next" />
 /// <reference types="next/types/global" />
-
-declare module '*.scss' {
-  const content: { [className: string]: string }
-  export = content
-}
+/// <reference types="next/image-types/global" />

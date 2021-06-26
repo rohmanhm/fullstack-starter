@@ -1,7 +1,6 @@
 import { withNavigation } from '@/components/Navigation'
 import { Button, Container, useColorMode } from '@chakra-ui/react'
 import Head from 'next/head'
-import React from 'react'
 
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode()
