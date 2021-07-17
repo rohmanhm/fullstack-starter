@@ -10,6 +10,8 @@ const Topbar: FC = ({ children }) => {
       left="0"
       borderBottom="1px solid"
       borderColor={mode('gray.200', 'gray.600')}
+      backgroundColor={mode('white', 'gray.800')}
+      zIndex={10}
     >
       <Container maxW="container.md">
         <Flex className="topbar-main">{children}</Flex>
