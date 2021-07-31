@@ -1,0 +1,15 @@
+FROM node:16-alpine3.11
+
+COPY package.json yarn.lock /app/
+
+COPY src/server/prisma/schema.prisma /app/src/server/prisma/schema.prisma
+
+WORKDIR /app
+
+RUN ["yarn", "install"]
+
+COPY . /app
+
+EXPOSE 5555
+
+CMD ["yarn", "prisma", "studio"]

@@ -1,0 +1,9 @@
+.git
+.next
+.vscode
+.husky
+generated
+node_modules
+
+README.md
+.env

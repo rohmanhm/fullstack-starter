@@ -31,3 +31,10 @@ yarn build
 ```bash
 yarn build-analyze
 ```
+
+### Notes
+
+- nexus.tsconfig.json
+
+This file is used as a workaround for https://github.com/graphql-nexus/schema/issues/391
+It allows the nexus schema generation to work (done via `npm run generate:nexus`).

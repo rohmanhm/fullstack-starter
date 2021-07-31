@@ -1,2 +1,4 @@
 .next/
 node_modules/
+generated/
+babel.config.js

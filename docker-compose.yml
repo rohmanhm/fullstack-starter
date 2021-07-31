@@ -1,0 +1,30 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:13.3-alpine
+    env_file:
+      - docker.env
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - data:/var/lib/postgresql/data/
+    networks:
+      - server
+  prisma-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile.studio
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}?schema=public
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    ports:
+      - '5555:5555'
+    networks:
+      - server
+networks:
+  server:
+volumes:
+  data:
