@@ -1,10 +1,23 @@
-import { NAVIGATION_MENU } from '@/client/configs'
 import { Container, Flex, useColorModeValue as mode } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
+import { IconType } from 'react-icons'
 import { NavigationMenu } from './menu'
 
-const Navigation: FC = () => {
+export const NAVIGATION_MENU_TEST_ID = 'navigation-menu'
+
+export interface NavigationMenuItem {
+  icon: IconType
+  label: string
+  pathname: string
+  activeCondition?: (pathname: string) => boolean
+}
+
+export type NavigationProps = {
+  items?: NavigationMenuItem[]
+}
+
+const Navigation: FC<NavigationProps> = ({ items }) => {
   const router = useRouter()
   return (
     <Flex
@@ -17,14 +30,15 @@ const Navigation: FC = () => {
       color="gray.500"
     >
       <Container maxW="container.md" display="inline-flex" px="0">
-        {NAVIGATION_MENU.map((menu, i) => (
+        {items?.map((item) => (
           <NavigationMenu
-            key={i}
+            data-testid={NAVIGATION_MENU_TEST_ID}
+            key={`${item.pathname}-${item.label}`}
             isActive={
-              menu.activeCondition?.(router.pathname) ||
-              menu.pathname === router.pathname
+              item.activeCondition?.(router.pathname) ||
+              item.pathname === router.pathname
             }
-            {...menu}
+            {...item}
           />
         ))}
       </Container>

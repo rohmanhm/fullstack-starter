@@ -1,12 +1,14 @@
 import { withNavigation } from '@/client/components/navigation'
 import { Box, Button, Container, Heading, Link } from '@chakra-ui/react'
 import { NextPage } from 'next'
+import { useSession } from 'next-auth/client'
 import NextLink from 'next/link'
 import { useCallback } from 'react'
 
-const user = { name: 'mock user' }
-
 const ProfilePage: NextPage = () => {
+  const [session] = useSession()
+  const user = session?.user
+
   const handleLogout = useCallback(async () => {
     window.location.href = '/login'
   }, [])
@@ -14,9 +16,9 @@ const ProfilePage: NextPage = () => {
   return (
     <Container maxW="container.md">
       <Box p={5}>
-        {user && (
+        {session && (
           <>
-            <Heading>Hi, {user?.name}</Heading>
+            <Heading>Hi, {user?.email}</Heading>
             <Button onClick={handleLogout} mt={4}>
               Keluar
             </Button>

@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "globals": {
     "Atomics": "readonly",
@@ -21,9 +22,10 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "standard",
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:cypress/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "cypress", "jest"],
   "rules": {
     "no-use-before-define": "off",
     "react/prop-types": "off",

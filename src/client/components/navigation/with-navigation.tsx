@@ -1,3 +1,4 @@
+import { NAVIGATION_MENU } from '@/client/configs'
 import { ComponentType, FC } from 'react'
 import Navigation from './navigation'
 
@@ -6,7 +7,7 @@ export const withNavigation = (Component: ComponentType) => {
     return (
       <>
         <Component {...props} />
-        <Navigation />
+        <Navigation items={NAVIGATION_MENU} />
       </>
     )
   }

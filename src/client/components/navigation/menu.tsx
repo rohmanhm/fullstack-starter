@@ -13,7 +13,7 @@ export const NavigationMenu: FC<{
   label: string
   isActive?: boolean
   pathname?: string
-}> = ({ label, icon, pathname, isActive }) => {
+}> = ({ label, icon, pathname, isActive, ...props }) => {
   return (
     <NextLink href={pathname || '#'}>
       <Flex
@@ -23,6 +23,7 @@ export const NavigationMenu: FC<{
         alignItems="center"
         p="3"
         cursor="pointer"
+        {...props}
       >
         <Icon
           as={icon}

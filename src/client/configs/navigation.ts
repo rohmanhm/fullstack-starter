@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons'
 import {
   HiClipboardList,
   HiCollection,
@@ -6,14 +5,9 @@ import {
   HiSearch,
   HiUser,
 } from 'react-icons/hi'
+import { NavigationMenuItem } from '../components/navigation'
 import { ROUTES } from './routes'
 
-interface NavigationMenuItem {
-  icon: IconType
-  label: string
-  pathname: string
-  activeCondition?: (pathname: string) => boolean
-}
 export const NAVIGATION_MENU: NavigationMenuItem[] = [
   {
     icon: HiCollection,
