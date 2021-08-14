@@ -1,7 +1,7 @@
 import { withNavigation } from '@/client/components/navigation'
 import { Box, Button, Container, Heading, Link } from '@chakra-ui/react'
 import { NextPage } from 'next'
-import { useSession } from 'next-auth/client'
+import { signOut, useSession } from 'next-auth/client'
 import NextLink from 'next/link'
 import { useCallback } from 'react'
 
@@ -10,6 +10,7 @@ const ProfilePage: NextPage = () => {
   const user = session?.user
 
   const handleLogout = useCallback(async () => {
+    await signOut()
     window.location.href = '/login'
   }, [])
 

@@ -30,12 +30,12 @@ const Navigation: FC<NavigationProps> = ({ items }) => {
       color="gray.500"
     >
       <Container maxW="container.md" display="inline-flex" px="0">
-        {items?.map((item) => (
+        {items?.map(({ activeCondition, ...item }) => (
           <NavigationMenu
             data-testid={NAVIGATION_MENU_TEST_ID}
             key={`${item.pathname}-${item.label}`}
             isActive={
-              item.activeCondition?.(router.pathname) ||
+              activeCondition?.(router.pathname) ||
               item.pathname === router.pathname
             }
             {...item}
