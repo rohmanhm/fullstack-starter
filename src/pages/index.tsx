@@ -4,10 +4,11 @@ import Head from 'next/head'
 
 const IndexPage = () => {
   const { toggleColorMode } = useColorMode()
+
   return (
     <Container maxW="container.md">
       <Head>
-        <title>Hello World</title>
+        <title>Home Page</title>
       </Head>
       <Button m={5} colorScheme="secondary" onClick={toggleColorMode}>
         Toggle Mode

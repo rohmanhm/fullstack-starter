@@ -2,10 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
-import { AccountListRelationFilter } from "../inputs/AccountListRelationFilter";
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
-import { DateTimeNullableFilter } from "../inputs/DateTimeNullableFilter";
-import { SessionListRelationFilter } from "../inputs/SessionListRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 
@@ -43,11 +40,6 @@ export class UserWhereInput {
   })
   email?: StringNullableFilter | undefined;
 
-  @TypeGraphQL.Field(_type => DateTimeNullableFilter, {
-    nullable: true
-  })
-  emailVerified?: DateTimeNullableFilter | undefined;
-
   @TypeGraphQL.Field(_type => StringNullableFilter, {
     nullable: true
   })
@@ -62,14 +54,4 @@ export class UserWhereInput {
     nullable: true
   })
   updatedAt?: DateTimeFilter | undefined;
-
-  @TypeGraphQL.Field(_type => AccountListRelationFilter, {
-    nullable: true
-  })
-  accounts?: AccountListRelationFilter | undefined;
-
-  @TypeGraphQL.Field(_type => SessionListRelationFilter, {
-    nullable: true
-  })
-  sessions?: SessionListRelationFilter | undefined;
 }

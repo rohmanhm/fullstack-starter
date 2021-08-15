@@ -22,11 +22,6 @@ export class UserMinAggregate {
   })
   email!: string | null;
 
-  @TypeGraphQL.Field(_type => Date, {
-    nullable: true
-  })
-  emailVerified!: Date | null;
-
   @TypeGraphQL.Field(_type => String, {
     nullable: true
   })

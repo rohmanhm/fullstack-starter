@@ -2,8 +2,6 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
-import { Account } from "../models/Account";
-import { Session } from "../models/Session";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true
@@ -24,11 +22,6 @@ export class User {
   })
   email?: string | null;
 
-  @TypeGraphQL.Field(_type => Date, {
-    nullable: true
-  })
-  emailVerified?: Date | null;
-
   @TypeGraphQL.Field(_type => String, {
     nullable: true
   })
@@ -43,8 +36,4 @@ export class User {
     nullable: false
   })
   updatedAt!: Date;
-
-  accounts?: Account[];
-
-  sessions?: Session[];
 }

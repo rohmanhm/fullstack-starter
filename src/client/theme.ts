@@ -37,7 +37,7 @@ const colors = {
 
 const theme = extendTheme({
   colors,
-  config: { initialColorMode: 'dark' },
+  config: { initialColorMode: 'light' },
   breakpoints,
 })
 

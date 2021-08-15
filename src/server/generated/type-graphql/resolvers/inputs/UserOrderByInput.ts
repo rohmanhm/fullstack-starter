@@ -26,11 +26,6 @@ export class UserOrderByInput {
   @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true
   })
-  emailVerified?: "asc" | "desc" | undefined;
-
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
-  })
   image?: "asc" | "desc" | undefined;
 
   @TypeGraphQL.Field(_type => SortOrder, {
