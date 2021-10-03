@@ -1,4 +1,15 @@
-# NextJS + Prisma + NextAuth
+# Fullstack Starter
+
+## What's in it?
+
+- [x] NextJS
+- [x] GraphQL
+- [x] TypeScript
+- [x] Prisma
+- [x] Chakra-UI
+- [x] Cypress
+- [x] Jest
+- [x] Husky
 
 ## How to run
 

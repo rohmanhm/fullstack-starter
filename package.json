@@ -1,5 +1,5 @@
 {
-  "name": "@adol/app",
+  "name": "@rohmanhm/fullstack-starter",
   "version": "0.0.0",
   "private": true,
   "author": "Rohman Habib M <mhrohman@live.com>",
@@ -40,7 +40,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.12.2",
-    "react-icons": "^4.2.0",
+    "react-icons": "~4.2.0",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.1.1"
   },
